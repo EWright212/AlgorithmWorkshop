@@ -9,5 +9,8 @@ describe AlgorithmRunner do
   it 'should run the algorithm for timing reverse' do
     expect(subject.reverse_timed).to be_truthy
   end
+  it 'should run the algorithm for timing reverse' do
+    expect(subject.shuffle_timed).to be_truthy
+  end
 
 end
