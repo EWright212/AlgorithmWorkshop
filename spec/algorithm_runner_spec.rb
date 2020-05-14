@@ -13,4 +13,7 @@ describe AlgorithmRunner do
     expect(subject.shuffle_timed).to be_truthy
   end
 
+  # it 'should create an array when running the "last" algorithm' do 
+  #   expect(subject.last_timed).to 
+
 end
