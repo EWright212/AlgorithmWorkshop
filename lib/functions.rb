@@ -13,7 +13,6 @@ class Functions
   end
 
   def reverse(array)
-    # find last
     n = array.length
     reverse_array = []
     while n >= 1
