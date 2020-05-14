@@ -7,4 +7,9 @@ describe Functions do
     expect(subject.last(['hi', 'cat', 'fish', 'tea'])).to eq('tea')
   end   
 
+  it 'should return the array reversed' do
+    expect(subject.reverse([1, 2, 3])).to eq([3, 2, 1]) 
+    expect(subject.reverse(['hi', 'cat', 'fish', 'tea'])).to eq(['tea', 'fish', 'cat', 'hi'])
+  end
+
 end
