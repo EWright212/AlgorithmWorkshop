@@ -12,4 +12,9 @@ describe Functions do
     expect(subject.reverse(['hi', 'cat', 'fish', 'tea'])).to eq(['tea', 'fish', 'cat', 'hi'])
   end
 
+  it 'should return the array reversed' do
+    expect(subject.shuffle([1, 2, 3])).to include(3, 2, 1) 
+    expect(subject.reverse(['hi', 'cat', 'fish', 'tea'])).to include('tea', 'fish', 'cat', 'hi')
+  end
+
 end

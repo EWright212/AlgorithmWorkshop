@@ -9,7 +9,16 @@ class Functions
   def sort
   end
 
-  def shuffle
+  def shuffle(array)
+    n = array.length
+    shuffle_array = []
+    while n >= 1
+      selected_item = rand(n)
+      shuffle_array << array[selected_item]
+      array.delete_at(selected_item)
+      n = n-1
+    end
+    shuffle_array
   end
 
   def reverse(array)
