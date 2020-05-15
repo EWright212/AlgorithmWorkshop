@@ -20,4 +20,8 @@ describe Functions do
   it 'should sort an array' do
     expect(subject.sort([1, 4, 3])).to eq([1, 3, 4])
   end
+
+  it 'should sort an array' do
+    expect(subject.sort([1, 'cat', 3])).to eq([1, 3, 'cat'])
+  end
 end

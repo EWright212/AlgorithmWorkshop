@@ -25,6 +25,15 @@ class Functions
       sorted_array << y
       int_array.delete(y)
     end
+    string_array.each do |s|
+      if s.start_with?('c') 
+        sorted_array << s
+        string_array.delete(s)
+      elsif s = string_array.start_with?(['d']) 
+        sorted_array << s
+        string_array.delete(s)
+      end
+    end
     return sorted_array
 
 # check what data format each element is
