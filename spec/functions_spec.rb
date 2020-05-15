@@ -24,4 +24,8 @@ describe Functions do
   it 'should sort an array' do
     expect(subject.sort([1, 'cat', 3])).to eq([1, 3, 'cat'])
   end
+
+  it 'should sort an array of strings' do
+    expect(subject.sort(['cat', 'dog', 'elf', 'bread', 'toast'])). to eq(['bread', 'cat', 'dog', 'elf', 'toast'])
+  end 
 end

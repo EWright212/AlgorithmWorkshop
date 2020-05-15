@@ -25,14 +25,15 @@ class Functions
       sorted_array << y
       int_array.delete(y)
     end
-    string_array.each do |s|
-      if s.start_with?('c') 
-        sorted_array << s
-        string_array.delete(s)
-      elsif s = string_array.start_with?(['d']) 
-        sorted_array << s
-        string_array.delete(s)
-      end
+    for i in 1 .. string_array.length do
+      s = string_array.min
+      sorted_array << s
+      string_array.delete(s)
+    # string_array.each do |s|
+    #   if s.start_with?('c') 
+    #     sorted_array << s
+    #     string_array.delete(s)
+      
     end
     return sorted_array
 
