@@ -6,7 +6,36 @@ class Functions
     return array[n-1]
   end
 
-  def sort
+  def sort(array)
+    int_array = []
+    string_array = []
+    float_array = []
+    sorted_array = []
+    array.each do |x| 
+      if x.is_a? Integer 
+        int_array << x 
+      elsif x.is_a? String
+        string_array << x
+      elsif x.is_a? Float
+        float_array << x
+      end
+    end
+    for i in 1 .. int_array.length do
+      y = int_array.min
+      sorted_array << y
+      int_array.delete(y)
+    end
+    return sorted_array
+
+# check what data format each element is
+# put all integers into an array
+# put all strings into an array
+# find the lowest integer
+# move it into a new array
+# delete it out of the old one
+# repeat
+
+
   end
 
   def shuffle(array)
