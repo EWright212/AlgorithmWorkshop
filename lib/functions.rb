@@ -56,4 +56,34 @@ class Functions
     reverse_array
   end
 
+  def find_duplicates(array)
+    n = array.length
+    output_array = []
+    while n >= 1
+      # take element last
+      for i in 0..n-2
+        for j in 0..output_array.length
+          if array[n-1] == output_array[j]
+            array.pop
+            n = n-1
+            break
+          end 
+        end
+        if array[n-1] == array[i]
+          output_array << array[n-1]
+          array.pop
+          n = n-1
+          array[i], array[n-1] = array[n-1], array[i]
+          array.pop
+          break
+        end
+      end
+      # run over rest of array until find a duplicate
+      # add duplicate to new array
+      # take element 2nd to last and repeat
+      n = n-1
+    end
+    output_array
+  end
+
 end
