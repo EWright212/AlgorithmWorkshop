@@ -29,23 +29,9 @@ class Functions
       s = string_array.min
       sorted_array << s
       string_array.delete(s)
-    # string_array.each do |s|
-    #   if s.start_with?('c') 
-    #     sorted_array << s
-    #     string_array.delete(s)
-      
     end
+    print sorted_array
     return sorted_array
-
-# check what data format each element is
-# put all integers into an array
-# put all strings into an array
-# find the lowest integer
-# move it into a new array
-# delete it out of the old one
-# repeat
-
-
   end
 
   def shuffle(array)
