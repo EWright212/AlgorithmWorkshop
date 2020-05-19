@@ -14,8 +14,12 @@ describe AlgorithmRunner do
   #   expect(subject.shuffle_timed).to be_truthy
   # end
 
+  # it 'should run the algorithm for timing optimised shuffle' do
+  #   expect(subject.optimised_shuffle_timer).to be_truthy
+  # end
+  
   it 'should run the algorithm for timing optimised shuffle' do
-    expect(subject.optimised_shuffle_timer).to be_truthy
+    expect(subject.optimised_reverse_timer).to be_truthy
   end
 
   # it 'should create an array when running the "last" algorithm' do 

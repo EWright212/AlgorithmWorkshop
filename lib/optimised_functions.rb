@@ -10,4 +10,15 @@ class OptimisedFunctions
       end
       new_array
   end
+
+  def optimised_reverse(array)
+    n = array.length
+    reverse_array = []
+    while n >= 1
+      reverse_array << array[n-1]
+      n = n-1
+    end
+    reverse_array
+  end
+
 end

@@ -42,19 +42,34 @@ class AlgorithmRunner
   #   return total_time
   # end
 
-  def optimised_shuffle_timer
+  # def optimised_shuffle_timer
+  #   optimised_function = OptimisedFunctions.new
+  #   timer = Timer.new
+  #   for i in 1 .. 20
+  #     array = Array.new.init(i * 5000)
+  #     start_time = timer.start_time
+  #     optimised_function.optimised_shuffle(array)
+  #     end_time = timer.end_time
+  #     total_time = timer.get_time(start_time, end_time)
+  #     puts total_time
+  #   end
+  #   return total_time
+  # end
+
+  def optimised_reverse_timer
     optimised_function = OptimisedFunctions.new
     timer = Timer.new
     for i in 1 .. 20
       array = Array.new.init(i * 5000)
       start_time = timer.start_time
-      optimised_function.optimised_shuffle(array)
+      optimised_function.optimised_reverse(array)
       end_time = timer.end_time
       total_time = timer.get_time(start_time, end_time)
       puts total_time
     end
     return total_time
   end
+  
 
   # def shuffle_timed
   #   function = Functions.new
