@@ -62,14 +62,15 @@ class Functions
     while n >= 1
       for i in 0..n-2
         if array[n-1] == array[i]
-          for j in 0..output_array.length
+          break_variable = 0
+          for j in 0...output_array.length
             if array[n-1] == output_array[j]
-              # array.pop
-              # n = n-1
-            break
+              break_variable = 1
             end
           end
-          output_array << array[n-1]
+          if break_variable == 0
+            output_array << array[n-1]
+          end
           array.pop
           n = n-1
           array[i], array[n-1] = array[n-1], array[i]
