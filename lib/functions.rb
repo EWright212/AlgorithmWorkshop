@@ -60,16 +60,15 @@ class Functions
     n = array.length
     output_array = []
     while n >= 1
-      # take element last
       for i in 0..n-2
-        for j in 0..output_array.length
-          if array[n-1] == output_array[j]
-            array.pop
-            n = n-1
-            break
-          end 
-        end
         if array[n-1] == array[i]
+          for j in 0..output_array.length
+            if array[n-1] == output_array[j]
+              # array.pop
+              # n = n-1
+            break
+            end
+          end
           output_array << array[n-1]
           array.pop
           n = n-1

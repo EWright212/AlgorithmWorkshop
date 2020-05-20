@@ -29,8 +29,13 @@ describe Functions do
     expect(subject.sort(['cat', 'dog', 'elf', 'bread', 'toast'])). to eq(['bread', 'cat', 'dog', 'elf', 'toast'])
   end 
 
-  it 'should find suplicates in an array' do
+  it 'should find duplicates in an array' do
     expect(subject.find_duplicates(['cat', 'cat', 'elf', 'bread', 'toast'])). to eq(['cat'])
+    expect(subject.find_duplicates(['1', '1'])). to eq(['1'])
+    expect(subject.find_duplicates(['1', '1', '2'])). to eq(['1'])
+    expect(subject.find_duplicates(['1', '1', '2', '2'])). to eq(['2', '1'])
+    expect(subject.find_duplicates(['cat', 'cat', 'cat'])). to eq(['cat'])
+    expect(subject.find_duplicates(['cat', 'cat', 'cat', 'cat'])). to eq(['cat'])
     expect(subject.find_duplicates(['cat', 'cat', 'cat', 'cat', 'cat'])). to eq(['cat'])
   end 
 end
